@@ -1,0 +1,45 @@
+{
+  "training": {
+    "total_steps": 200000,
+    "update_interval": 2048,
+    "batch_size": 256,
+    "gamma": 0.995,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "vf_coef": 0.5,
+    "ent_coef": 0.001,
+    "learning_rate": 0.0003,
+    "max_grad_norm": 0.5,
+    "checkpoint_interval": 10000,
+    "opponent_refresh_interval": 5000,
+    "viewer_update_interval": 0.5,
+    "console_update_interval": 5,
+    "simulation_pace": "max",
+    "resume_mode": "auto"
+  },
+  "env": {
+    "tick_rate": 120,
+    "max_episode_seconds": 90,
+    "ball_touch_reward": 0.3,
+    "backwards_penalty": -0.05,
+    "upside_down_penalty": -0.1,
+    "write_match_state": true,
+    "state_write_interval": 0.05,
+    "boost_use_penalty": -0.005,
+    "dist_increase_penalty": -0.0003,
+    "air_time_penalty": -0.003
+  },
+  "paths": {
+    "outputs": "outputs",
+    "checkpoints": "outputs/checkpoints",
+    "final": "outputs/final",
+    "eval": "outputs/eval",
+    "backups": "outputs/backups",
+    "live_metrics": "outputs/live_metrics.json",
+    "live_match_state": "outputs/live_match_state.json"
+  },
+  "update": {
+    "repo": "TekkSchusta/SimpleRLTrainer",
+    "auto": true
+  }
+}
